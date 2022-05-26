@@ -1,6 +1,6 @@
 scalaVersion := "2.13.8"
-organization := "dev.zio.quickstart"
-name := "zio-quickstart-graphql"
+organization := "dev.zio"
+name := "zio-quickstart-graphql-webservice"
 
 libraryDependencies ++= Seq(
   "dev.zio"               %% "zio"              % "2.0.0-RC2",
