@@ -31,7 +31,7 @@ object MainApp extends ZIOAppDefault {
     ).interpreter.flatMap(interpreter =>
       Server
         .start(
-          port = 8080,
+          port = 8088,
           http = Http.collectHttp { case _ -> !! / "api" / "graphql" =>
             ZHttpAdapter.makeHttpService(interpreter)
           }
