@@ -32,7 +32,7 @@ object MainApp extends ZIOAppDefault {
       Server
         .start(
           port = 8088,
-          http = Http.collectHttp { case _ -> !! / "api" / "graphql" =>
+          http = Http.collectHttp[Request] { case _ -> !! / "api" / "graphql" =>
             ZHttpAdapter.makeHttpService(interpreter)
           }
         )
